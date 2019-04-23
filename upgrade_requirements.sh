@@ -15,7 +15,7 @@ find . -name requirements.txt | while read -r filename; do
     # Upgrade to known-good versions
     sed 's/Django.*/Django==1.11.19/' -i "$filename"
     sed 's/Flask.*/Flask==0.12.3/' -i "$filename"
-    sed 's/Jinja2.*/Jinja2==0.12.3/' -i "$filename"
+    sed 's/Jinja2.*/Jinja2==2.10.1/' -i "$filename"
 
     # Future-proof by allowing compatible versions
     sed 's/==/~=/' -i "$filename"
